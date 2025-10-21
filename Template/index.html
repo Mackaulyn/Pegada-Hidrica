@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegada Hidrica</title>
 
+    <style>
+        /* Variáveis de Cores */
+        :root {
+            --primary-blue: #ADD8E6; /* Azul Claro (Light Blue) */
+            --secondary-blue: #0077B6; /* Azul Escuro para Destaque */
+            --background-white: #FFFFFF;
+            --text-dark: #333333;
+        }
+
+        /* Estilo para o BODY (Fundo Geral e Fonte Padrão) */
+        body {
+            font-family: Arial, sans-serif; /* Estilo de letra padrão */
+            margin: 0;
+            padding: 0;
+            padding-top: 60px; /* IMPORTANTE: Adiciona espaço para a barra fixa */
+            background-color: var(--background-white); /* Fundo da página (branco) */
+            color: var(--text-dark); /* Cor do texto padrão */
+            line-height: 1.6;
+            height: 200vh; /* Apenas para forçar a rolagem e testar a barra fixa */
+        }
+
+        /* Estilo para a Barra de Acesso Superior */
+        #top-bar {
+            /* FIXAÇÃO */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            
+            /* ESTILO VISUAL */
+            background-color: #007bff; /* Azul vibrante (MANTIDO) */
+            color: white;
+            padding: 10px 0; /* Espaçamento vertical */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+            /* CENTRALIZAÇÃO HORIZONTAL (Logotipo e Nav) */
+            display: flex;
+            justify-content: center; /* Centraliza o contêiner interno */
+            align-items: center;
+        }
+
+        /* Novo: Contêiner para alinhar Logotipo no Canto e Nav na Direita */
+        .container-bar {
+            width: 90%; /* Largura do conteúdo dentro da barra */
+            max-width: 1200px;
+            display: flex;
+            /* NOVO: Alinha o primeiro elemento (Logo) à esquerda e o último (Nav) à direita */
+            justify-content: space-between; 
+            align-items: center;
+        }
+
+        /* CORREÇÃO: Estiliza o Logotipo Imagem para caber na barra */
+        #logo-equipe {
+            height: 40px; /* Tamanho adequado para a barra */
+            width: auto;
+            vertical-align: middle;
+            padding: 0; /* Zera padding para ficar no canto */
+            margin: 0; /* Zera margem para ficar no canto */
+        }
+        
+        /* Removidas as regras .logo e .logo img de 140px, pois não se aplicam à barra fixa */
+        
+        /* Estiliza a Navegação (Links) */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px; /* Espaçamento entre os links */
+            padding: 5px 0;
+            font-weight: bold;
+            transition: color 0.3s, border-bottom 0.3s;
+            /* text-align:center; - Removido, desnecessário aqui */
+        }
+
+        /* Efeito ao passar o mouse */
+        nav a:hover {
+            color: #ffc107; /* Amarelo/Dourado ao passar o mouse */
+            border-bottom: 2px solid #ffc107;
+        }
+
+        /* --- Estilos de Conteúdo (Mantidos) --- */
+        header {
+            background: linear-gradient(135deg, #1bcae9 60%, rgb(35, 54, 224) 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 40px 5vw 50px 5vw;
+            clip-path: polygon(0, 0, 100% 0, 100% 83, 0% 100%);
+            min-height: 190px;
+        }
+
+        h1 {
+            color: var(--secondary-blue);
+            text-align: center;
+            padding-top: 20px;
+        }
+        
+        .content-div {
+            width: 80%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: var(--background-white);
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="top-bar">
+        <div class="container-bar">
+            <img id="logo-equipe" src="img/logo.j" alt="Logotipo Programadores Aquáticos">
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#comoreverter">Como reverter</a>
+                <a href="#quemsomos">Quem somos nós?</a>
+            </nav>
+        </div>
+    </div>
+
+    <h1>Bem-vindo ao Nosso Site!</h1>
+
+    <div class="content-div">
+        <h2 id="inicio">Início: Seção Principal</h2>
+        <p>Este é um exemplo de conteúdo dentro de uma DIV estilizada. O tema usa azul claro e branco para um visual limpo e moderno.</p>
+    </div>
+
+    <div class="content-div">
+        <h2 id="sobre">Mais Informações sobre o Projeto</h2>
+        <p>A fonte padrão para todo o site é Arial. As cores principais são o branco de fundo e um azul claro na barra superior.</p>
+    </div>
+
+    <div class="content-div">
+        <h2 id="comoreverter">Como reverter</h2>
+        <p>Aqui você encontrará dicas e técnicas de programação para reduzir sua pegada hídrica.</p>
+    </div>
+
+    <div class="content-div">
+        <h2 id="quemsomos">Quem somos nós?</h2>
+        <p>O grupo F|Pegada trabalha com a força da programação para promover a sustentabilidade hídrica.</p>
+    </div>
+
+</body>
+</html>
